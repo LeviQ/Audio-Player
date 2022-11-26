@@ -36,7 +36,7 @@
                         </Grid>
                     </Button>
 
-                    <Button Click ="Button_Click_Search" Style="{StaticResource menuButton}" Cursor="Hand" Margin = "20 20 20 0">
+                    <Button Click ="Button_Click_Search" Style="{StaticResource menuButton}" Cursor="Hand">
                         <Grid>
                             <TextBlock Text="Search" Margin=" 0 0 0 2"/>
                             <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
