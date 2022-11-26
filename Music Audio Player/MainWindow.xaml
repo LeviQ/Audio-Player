@@ -1,0 +1,90 @@
+﻿<Window x:Class="Music_Audio_Player.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Title="Music Audio Player" Height="700" Width="1050" ResizeMode="NoResize" AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+
+    <Border Background="#1f1b24" CornerRadius="40 0 0 40" MouseDown="Border_MouseDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+
+            <!--Menu-->
+
+            <Border Background="#121212" CornerRadius="40 0 0 40" Grid.RowSpan ="2">
+                <StackPanel >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20" RenderTransformOrigin="0.614,-2.5">
+                        <Ellipse Fill="Red" Width="15" Height="15"/>
+                        <Ellipse Fill="Yellow" Width="15" Height="15" Margin="7 0"/>
+                        <Ellipse Fill="Green" Width="15" Height="15"/>
+                    </StackPanel>
+                    <TextBlock Text="Music Player" Style="{StaticResource menuTitle}" Margin="30 50 30 30" TextAlignment="Center"/>
+
+                    <Button Click ="Button_Click_Home" Style="{StaticResource menuButton}" Background="#02be68" Foreground="White" Cursor="Hand">
+                        <Grid>
+                            <TextBlock Text="Home" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}" Visibility="visible"/>
+                        </Grid>
+                    </Button>
+
+                    <Button Click ="Button_Click_Search" Style="{StaticResource menuButton}" Cursor="Hand" Margin = "20 20 20 0">
+                        <Grid>
+                            <TextBlock Text="Search" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
+                        </Grid>
+                    </Button>
+
+                    <Button Click ="Button_Click_Playlists" Style="{StaticResource menuButton}" Cursor="Hand">
+                        <Grid>
+                            <TextBlock Text="Playlists" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
+                        </Grid>
+                    </Button>
+
+                    <Button Click ="Button_Click_Albums" Style="{StaticResource menuButton}" Cursor="Hand">
+                        <Grid>
+                            <TextBlock Text="Albums" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
+                        </Grid>
+                    </Button>
+
+                    <Button Click ="Button_Click_Artists" Style="{StaticResource menuButton}" Cursor="Hand">
+                        <Grid>
+                            <TextBlock Text="Artists" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
+                        </Grid>
+                    </Button>
+
+                    <Button Click ="Button_Click_Radio" Style="{StaticResource menuButton}" Cursor="Hand">
+                        <Grid>
+                            <TextBlock Text="Radio" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
+                        </Grid>
+                    </Button>
+
+                    <Button Click ="Button_Click_Foryou" Style="{StaticResource menuButton}" Cursor="Hand">
+                        <Grid>
+                            <TextBlock Text="For you" Margin=" 0 0 0 2"/>
+                            <Icon:PackIconMaterial Style="{StaticResource menuButtonIcon}"/>
+                        </Grid>
+                    </Button>
+
+                </StackPanel>
+            </Border>
+
+            <!--Music-->
+
+        </Grid>
+    </Border>
+
+
+</Window>
