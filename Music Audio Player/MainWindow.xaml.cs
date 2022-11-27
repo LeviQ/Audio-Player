@@ -66,6 +66,9 @@ namespace Music_Audio_Player
             MessageBox.Show("For you - work in progress");
         }
 
+        private void Button_Click_Import(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
