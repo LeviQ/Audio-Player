@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,9 @@ namespace Music_Audio_Player
         {
             InitializeComponent();
         }
+
+        MediaPlayer player = new MediaPlayer();
+        string filename;
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -68,7 +72,20 @@ namespace Music_Audio_Player
 
         private void Button_Click_Import(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog import = new OpenFileDialog
+            {
+                Multiselect = false,
+                DefaultExt = ".mp3"
+            };
 
+            bool? agree = import.ShowDialog();
+            if (agree == true)
+            {
+                filename = import.FileName;
+                FilePath.Text = import.SafeFileName;
+                player.Open(new Uri(filename));
+
+            }
         }
     }
 }
